@@ -148,7 +148,7 @@ class TaskViewModel @Inject constructor(
                         priority = state.priority.value,
                         isComplete = state.isTaskComplete,
                         taskSubjectId = state.subjectId,
-                        taskId = state.currentTaskId!!
+                        taskId = state.currentTaskId
                     )
                 )
                 _snackbarEventFlow.emit(
@@ -158,7 +158,7 @@ class TaskViewModel @Inject constructor(
             } catch (e: Exception) {
                 _snackbarEventFlow.emit(
                     SnackbarEvent.ShowSnackbar(
-                        message = "Couldn't save task. ${e.message}",
+                        message = "Couldn't save task. ${e.message} ${state.currentTaskId}",
                         duration = SnackbarDuration.Long
                     )
                 )

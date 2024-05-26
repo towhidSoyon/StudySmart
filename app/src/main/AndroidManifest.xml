@@ -29,6 +29,7 @@
             </intent-filter>
         </activity>
         <service android:name=".presentation.session.StudySessionTimerService"
+            android:foregroundServiceType="shortService"
             android:exported="false"/>
     </application>
 

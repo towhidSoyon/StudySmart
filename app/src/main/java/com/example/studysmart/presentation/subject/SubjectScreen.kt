@@ -221,7 +221,7 @@ private fun SubjectScreen(
                 sectionTitle = "COMPLETED TASKS",
                 emptyListText = "You don't have any completed tasks.\n " +
                         "Click the check box on completion of task.",
-                tasks = state.upcomingTasks,
+                tasks = state.completedTasks,
                 onCheckBoxClick = {onEvent(SubjectEvent.OnTaskIsCompleteChange(it))},
                 onTaskCardClick = onTaskCardClick
             )
